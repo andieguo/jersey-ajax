@@ -4,4 +4,30 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+  	<servlet>
+		<servlet-name>ServletContainer</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>com.andieguo.jersey.resource</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+  
+  	<servlet>
+		<servlet-name>helloServlet</servlet-name>
+		<servlet-class>com.andieguo.jersey.servlet.HelloServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ServletContainer</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>helloServlet</servlet-name>
+		<url-pattern>/servlet/helloServlet</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

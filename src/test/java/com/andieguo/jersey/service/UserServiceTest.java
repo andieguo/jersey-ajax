@@ -1,4 +1,4 @@
-package com.andieguo.jersey.service.test;
+package com.andieguo.jersey.service;
 
 import com.andieguo.jersey.bean.User;
 import com.andieguo.jersey.service.UserService;

@@ -1,11 +1,14 @@
 package com.andieguo.jersey.bean;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class User {
+public class User implements Serializable{
 
+	private static final long serialVersionUID = 4708833932716811529L;
 	private String name;
 	private Integer age;
 	public User() {
